@@ -205,7 +205,7 @@ export default function HomePage() {
         className="hero" 
         style={{
           position: 'relative',
-          background: `linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("./static/images/canon-law-image.jpg")`,
+          background: `linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("/images/canon-law-image.jpg")`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',

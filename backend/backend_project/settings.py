@@ -10,7 +10,12 @@ SECRET_KEY = 'django-insecure-change-me'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '://canonlawguild.com',            # Your custom backend domain
+    '://onrender.com', # Render's default backend URL (placeholder)
+    'localhost', 
+    '127.0.0.1'
+]
 
 # Application definition
 INSTALLED_APPS = [
@@ -82,12 +87,16 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CORS
 CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
+    'https://canonlawguild.com',
+    'https://canonlawguild.com',
     'http://localhost:5173',
     'http://127.0.0.1:5173',
 ]
 CORS_ALLOW_HEADERS = ['*']
 CORS_ALLOW_METHODS = ['DELETE', 'GET', 'OPTIONS', 'PATCH', 'POST', 'PUT']
 CSRF_TRUSTED_ORIGINS = [
+    'https://canonlawguild.com',
+    'https://canonlawguild.com',
     'http://localhost:5173',
     'http://127.0.0.1:5173',
 ]

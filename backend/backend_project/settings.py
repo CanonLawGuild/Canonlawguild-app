@@ -81,6 +81,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+PRODUCTION_STATIC_DIR = BASE_DIR.parent / 'static'
 # Serve the shared static folder at the repo root
 STATICFILES_DIRS = [BASE_DIR / 'static'] if (BASE_DIR / 'static').exists() else []
 
@@ -94,6 +95,7 @@ CORS_ALLOW_ALL_ORIGINS = False
 CORS_ALLOWED_ORIGINS = [
     'https://canonlawguild.com',
     'https://www.canonlawguild.com',
+    'https://api.canonlawguild.com',
     'http://localhost:5173',
     'http://127.0.0.1:5173',
 ]

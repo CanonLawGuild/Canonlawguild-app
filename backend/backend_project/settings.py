@@ -82,6 +82,7 @@ STATIC_URL = '/static/'
 # Serve the shared static folder at the repo root
 STATICFILES_DIRS = [BASE_DIR.parent / 'static']
 
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # CORS

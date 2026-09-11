@@ -273,6 +273,463 @@ a:focus,button:focus{box-shadow:0 0 0 3px rgba(28,19,16,0.08);border-radius:6px}
 
 
 
+/* =========================================================
+   MOBILE + TABLET STABILITY
+   Prevent layout shaking, jumping and horizontal overflow
+   ========================================================= */
+
+/* Global stability */
+html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+/* Every major layout element must be allowed to shrink */
+.app-shell,
+.top-utility,
+.main-nav,
+.hero,
+.hero-inner,
+.section,
+.container,
+.footer,
+.footer-content,
+.grid,
+.news-grid,
+.card,
+.news-item {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Prevent long words / URLs from pushing the page wider */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span,
+div {
+  overflow-wrap: break-word;
+}
+
+/* Images must never create horizontal overflow */
+img,
+svg,
+video,
+iframe {
+  max-width: 100%;
+}
+
+/* =========================================================
+   TABLET STABILITY
+   ========================================================= */
+
+@media (max-width: 1024px) {
+
+  .hero-inner,
+  .hero .hero-inner {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .hero .hero-copy,
+  .hero .hero-media {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .grid,
+  .news-grid {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .card,
+  .news-item {
+    min-width: 0;
+    overflow: hidden;
+  }
+}
+
+
+/* =========================================================
+   TABLET + MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  /* Never let navigation cause viewport expansion */
+  .main-nav {
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+  }
+
+  .brand {
+    min-width: 0;
+    max-width: calc(100% - 54px);
+  }
+
+  .brand-shell {
+    min-width: 0;
+    max-width: calc(100% - 54px);
+  }
+
+  .brand-link {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .brand-title-stack {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .brand-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .mobile-nav-toggle {
+    flex: 0 0 44px;
+  }
+
+  /* Hero must never overflow */
+  .hero {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .hero .hero-inner {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero .hero-copy {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero h1,
+  .hero p {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .hero .hero-media {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero .hero-media img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  /* Grid children must be allowed to shrink */
+  .grid > *,
+  .news-grid > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* Cards cannot force viewport wider */
+  .card,
+  .news-item {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* Prevent horizontal layout movement */
+  .container,
+  .section,
+  .footer,
+  .hero {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* Stable vertical rhythm */
+  .hero {
+    display: block;
+  }
+
+  .hero .hero-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 24px;
+  }
+
+  .hero .hero-copy {
+    flex: 0 0 auto;
+  }
+
+  .hero .hero-media {
+    flex: 0 0 auto;
+  }
+
+  /* Prevent text from causing horizontal overflow */
+  .hero h1 {
+    width: 100%;
+    max-width: 100%;
+    font-size: clamp(1.6rem, 7vw, 2rem);
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .hero p {
+    width: 100%;
+    max-width: 100%;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+  }
+
+  /* Stable cards */
+  .card {
+    width: 100%;
+    min-height: 0;
+  }
+
+  /* Don't allow flex children to expand their parent */
+  .footer-content > *,
+  .section__heading > *,
+  .top-utility .left,
+  .top-utility .right {
+    min-width: 0;
+  }
+
+  /* Utility bar won't stretch the viewport */
+  .top-utility {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .top-utility .left,
+  .top-utility .right {
+    max-width: 100%;
+  }
+
+  /* Prevent buttons from causing overflow */
+  .btn,
+  .donate-btn,
+  .login-btn {
+    max-width: 100%;
+    white-space: normal;
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+  .hero .hero-inner {
+    gap: 20px;
+  }
+
+  .hero .hero-media img {
+    aspect-ratio: 16 / 10;
+  }
+
+  .brand-link {
+    gap: 5px;
+  }
+
+  .brand-title-stack {
+    overflow: hidden;
+  }
+
+  .brand-title {
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .section__heading {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .section__heading h2 {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* =========================================================
+   PREVENT COMMON "SHAKE" SOURCES
+   ========================================================= */
+
+/* Don't animate dimensions */
+*,
+*::before,
+*::after {
+  max-width: 100%;
+}
+
+/* Smooth transitions should only affect visual properties */
+.nav-item,
+.btn,
+.donate-btn,
+.login-btn,
+.dropdown a {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    opacity 0.2s ease;
+}
+
+/* Never transition width/height/margin/padding on mobile */
+@media (max-width: 900px) {
+
+  .nav-item,
+  .btn,
+  .donate-btn,
+  .login-btn,
+  .dropdown,
+  .dropdown a {
+    transition:
+      color 0.2s ease,
+      background-color 0.2s ease,
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+}
+
+
+/* =========================================================
+   SAFE MOBILE MENU
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .mobile-nav,
+  .mobile-menu {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .mobile-nav.is-open,
+  .mobile-menu.is-open {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .mobile-nav a,
+  .mobile-menu a {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* =========================================================
+   SAFER RESPONSIVE TABLES
+   ========================================================= */
+
+.table-responsive,
+.table-wrapper {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================================
+   SAFER FORMS
+   ========================================================= */
+
+form {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+}
+
+
+/* =========================================================
+   IOS / MOBILE VIEWPORT SAFETY
+   ========================================================= */
+
+@supports (-webkit-touch-callout: none) {
+
+  body {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .app-shell {
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+  }
+
+  .hero .hero-copy,
+  .hero .hero-media {
+    min-width: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+
+
 
 
 

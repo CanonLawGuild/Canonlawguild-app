@@ -1,28 +1,3 @@
-// import React from 'react'
-// import { Link } from 'react-router-dom'
-
-// export default function DonatePage(){
-//   return (
-//     <div className="container mt-md">
-//       <div className="section__heading">
-//         <h2>Donate</h2>
-//       </div>
-//       <p className="text-muted mt-sm">Support the Canon Law Sodality in its work of scholarship, education, and service.</p>
-
-//       <div className="grid mt-md grid--single-column">
-//         <section className="card card--accent">
-//           <p>Your generosity helps fund publications, public education, conferences, and outreach that deepen understanding of canon law.</p>
-//           <p>To make a contribution, please contact the Sodality leadership team through the contact page or the official church channels.</p>
-//           <Link to="/contact" className="btn btn-primary mt-sm">Contact Us</Link>
-//         </section>
-//       </div>
-//     </div>
-//   )
-// }
-
-
-
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -65,7 +40,7 @@ export default function DonatePage() {
         <h2>Donate</h2>
       </div>
       <p className="text-muted mt-sm" style={{ maxWidth: '600px' }}>
-        Support the Canon Law Sodality in its work of scholarship, education, and service.
+        Support the Canon Law Guild in its work of scholarship, education, and service.
       </p>
 
       {/* Centered grid container */}
@@ -164,7 +139,7 @@ export default function DonatePage() {
           {/* Offline/Alternative Options */}
           <div className="mt-md" style={{ borderTop: '1px solid #eee', paddingTop: '1.5rem' }}>
             <p className="text-muted" style={{ fontSize: '0.9rem' }}>
-              Prefer to contribute offline? Please reach out to the Sodality leadership team through our{' '}
+              Prefer to contribute offline? Please reach out to the Guild leadership team through our{' '}
               <Link to="/contact" style={{ color: 'inherit', textDecoration: 'underline' }}>contact page</Link> or through official church channels.
             </p>
           </div>

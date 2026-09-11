@@ -93,3 +93,19 @@ class Training(models.Model):
 
     def __str__(self):
         return self.title
+
+
+
+
+class ConstitutionVersion(models.Model):
+    title = models.CharField(max_length=255)
+    body = models.TextField(help_text="Separate paragraphs with double newlines if using a single string.")
+    bullets = models.JSONField(blank=True, null=True, help_text="List of strings for bullet items.")
+    published_at = models.DateTimeField(null=True, blank=True,)
+    pdf_file = models.FileField(upload_to='publications_pdfs/', null=True, blank=True)
+
+    class Meta:
+        ordering = ['-published_at']
+
+    def __str__(self):
+        return self.title

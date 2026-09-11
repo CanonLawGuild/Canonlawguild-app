@@ -26,6 +26,7 @@ import DonatePage from './pages/DonatePage'
 import ContactPage from './pages/ContactPage'
 import MembershipPage from './pages/MembershipPage'
 import PublicationView from './pages/PublicationView'
+import Constitution from './pages/Constitution'
 // import NewsEventDetailPage from './pages/NewsEventDetailPage'
 
 export default function App(){
@@ -36,13 +37,14 @@ export default function App(){
       <div className="app-shell">
         <Routes>
           <Route path="/" element={<Hero />} />
-          <Route path="/login" element={<Login />} />
+          {/* <Route path="/login" element={<Login />} /> */}
           <Route path="/donate" element={<DonatePage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/publications" element={<PublicationsList />} />
           <Route path="/membership/join" element={<Join />} />
           <Route path="/news-events" element={<NewsEventsPage />} />
           <Route path="/about/background" element={<BackgroundPage />} />
+          <Route path="/about/Constitution" element={<Constitution />} />
           <Route path="/about/founder" element={<FounderPage />} />
           <Route path="/about/leadership-structure" element={<LeadershipStructurePage />} />
           <Route path="/about/doctrinal-statement" element={<DoctrinalStatementPage />} />
@@ -61,6 +63,7 @@ export default function App(){
           <Route path="/membership" element={<MembershipPage />} />
           <Route path="/what-we-do/publications/:id" element={<PublicationView />} />
           
+          
           {/* <Route path="/news-events/:id" element={<NewsEventDetailPage />} /> */}
           
         </Routes>
@@ -68,7 +71,7 @@ export default function App(){
 
       <footer className="footer">
         <div className="container footer-content">
-          <span>© Canon Law Sodality</span>
+          <span>© Canon Law Guild</span>
           <Link to="/news-events" className="footer-link">News & Events</Link>
         </div>
       </footer>

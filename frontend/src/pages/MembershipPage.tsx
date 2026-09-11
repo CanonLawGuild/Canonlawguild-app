@@ -19,7 +19,7 @@ export default function MembershipPage() {
       title: 'Goodwill Membership',
       price: '$25',
       period: 'per year',
-      description: 'A supportive tier for non-practitioners who value the mission of the society.',
+      description: 'A supportive tier for non-practitioners who value the mission of the guild.',
       benefits: [
         'Digital-only access to our newsletters and law review updates',
         'General admission to public lectures and online webinars',
@@ -58,7 +58,7 @@ export default function MembershipPage() {
   return (
     <div className="membership-container" style={styles.container}>
       <header style={styles.header}>
-        <h1 style={styles.mainTitle}>Canon Law Society Membership</h1>
+        <h1 style={styles.mainTitle}>Canon Law Guild Membership</h1>
         <p style={styles.subtitle}>
           Welcome to the professional community of canonists, tribunal practitioners, and supporters of ecclesiastical jurisprudence.
         </p>

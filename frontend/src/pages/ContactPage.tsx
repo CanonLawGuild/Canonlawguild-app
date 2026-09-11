@@ -1,34 +1,3 @@
-// import React from 'react'
-// import { Link } from 'react-router-dom'
-
-// export default function ContactPage(){
-//   return (
-//     <div className="container mt-md">
-//       <div className="section__heading">
-//         <h2>Contact</h2>
-//       </div>
-//       <p className="text-muted mt-sm">Reach out for enquiries, support, or to connect with the Canon Law Sodality leadership.</p>
-
-//       <div className="grid mt-md grid--single-column">
-//         <section className="card card--accent">
-//           <p>If you have questions about membership, publications, conferences, or general support, please get in touch.</p>
-//           <ul>
-//             <li>General enquiries</li>
-//             <li>Membership and participation</li>
-//             <li>Donations and sponsorship</li>
-//             <li>Publications and events</li>
-//           </ul>
-//           <Link to="/" className="btn btn-outline mt-sm">Back to Home</Link>
-//         </section>
-//       </div>
-//     </div>
-//   )
-// }
-
-
-
-
-
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -38,7 +7,7 @@ export default function ContactPage(){
       <div className="section__heading">
         <h2>Contact</h2>
       </div>
-      <p className="text-muted mt-sm">Reach out for enquiries, support, or to connect with the Canon Law Sodality leadership.</p>
+      <p className="text-muted mt-sm">Reach out for enquiries, support, or to connect with the Canon Law Guild leadership.</p>
       
       <div className="grid mt-md grid--single-column">
         {/* Original Welcome Card */}

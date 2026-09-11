@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Publication, DecidedCase, AdvisoryOpinion, Event, Training
+from .models import ConstitutionVersion, Publication, DecidedCase, AdvisoryOpinion, Event, Training
 
 
 @admin.register(Publication)
@@ -25,3 +25,14 @@ class EventAdmin(admin.ModelAdmin):
 @admin.register(Training)
 class TrainingAdmin(admin.ModelAdmin):
     list_display = ('title', 'category')
+
+
+
+
+@admin.register(ConstitutionVersion)
+class ConstitutionVersionAdmin(admin.ModelAdmin):
+    # This controls which columns show up in your Django Admin list view table
+    list_display = ('title', 'published_at', 'pdf_file')
+    
+    # This adds a quick-search search bar box tracking by document title names
+    search_fields = ('title',)

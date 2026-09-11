@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Publication, DecidedCase, AdvisoryOpinion, Event, Training
+from .models import ConstitutionVersion, Publication, DecidedCase, AdvisoryOpinion, Event, Training
 
 
 class PublicationSerializer(serializers.ModelSerializer):
@@ -30,3 +30,10 @@ class TrainingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Training
         fields = '__all__'
+
+
+
+class ConstitutionVersionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ConstitutionVersion
+        fields = '__all__'  # This safely converts all model columns into clean JSON data properties

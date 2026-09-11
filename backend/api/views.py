@@ -51,8 +51,9 @@ from rest_framework import viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
-from .models import Publication, DecidedCase, AdvisoryOpinion, Event, Training
+from .models import ConstitutionVersion, Publication, DecidedCase, AdvisoryOpinion, Event, Training
 from .serializers import (
+    ConstitutionVersionSerializer,
     PublicationSerializer,
     DecidedCaseSerializer,
     AdvisoryOpinionSerializer,
@@ -105,3 +106,10 @@ class EventViewSet(viewsets.ModelViewSet):
 class TrainingViewSet(viewsets.ModelViewSet):
     queryset = Training.objects.all().order_by('-published_at')
     serializer_class = TrainingSerializer
+
+
+
+class ConstitutionVersionViewSet(viewsets.ModelViewSet):
+    queryset = ConstitutionVersion.objects.all()
+    serializer_class = ConstitutionVersionSerializer
+    

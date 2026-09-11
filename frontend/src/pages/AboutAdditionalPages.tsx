@@ -282,7 +282,7 @@ export function ContactFounderPage() {
   // Retained your exact original text parameters unchanged
   const staticContent = [
     'For general enquiries, please use the contact details provided on the main website or reach out through the official contact page.',
-    'If you have a question about the Sodality’s mission, membership, or publications, the leadership team will be glad to assist you.',
+    'If you have a question about the Guild’s mission, membership, or publications, the leadership team will be glad to assist you.',
   ];
 
   // Professional leadership profile datasets detailing positions and structural responsibilities

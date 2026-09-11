@@ -132,7 +132,7 @@ export function BackgroundPage() {
               
               <div className="bg-card-footer">
                 <span className="bg-footer-cross">✠</span>
-                <span className="bg-footer-text">Canon Law Sodality of Uganda</span>
+                <span className="bg-footer-text">Canon Law Guild of Uganda</span>
               </div>
             </div>
           ))}
@@ -317,7 +317,7 @@ export function FounderPage() {
     {
       name: "The Rev. Canon Dr. Emmanuel Musoke", // Example Name - replace with your actual founder
       role: "Visionary & Primary Convener",
-      contribution: "Conceived the initial blueprint for the Sodality to anchor canonical scholarship within East Africa. He brought together legal experts and church leaders to create a formal guild dedicated to ecclesiastical rule of law.",
+      contribution: "Conceived the initial blueprint for the Guild to anchor canonical scholarship within East Africa. He brought together legal experts and church leaders to create a formal guild dedicated to ecclesiastical rule of law.",
       imageText: "Portrait Placeholder" 
     },
     {
@@ -333,7 +333,7 @@ export function FounderPage() {
       {/* 1. RETAINED: Your exact original content page setup layout */}
       <ContentPage
         title="Founder"
-        intro="The Sodality was shaped by a vision of scholarship and pastoral care, bringing canon law into conversation with the life of the Church."
+        intro="The Guild was shaped by a vision of scholarship and pastoral care, bringing canon law into conversation with the life of the Church."
         sections={staticSections}
       />
 
@@ -575,7 +575,7 @@ export function LeadershipStructurePage() {
     {
       title: 'Structure',
       body: [
-        'Leadership includes elected officers, advisors, and committees that help guide the Sodality’s work.',
+        'Leadership includes elected officers, advisors, and committees that help guide the Guild’s work.',
         'The structure is designed to balance continuity, accountability, and participation.'
       ],
     },
@@ -613,7 +613,7 @@ export function LeadershipStructurePage() {
       {/* 1. RETAINED: Your exact original content page structure and setup */}
       <ContentPage
         title="Leadership Structure"
-        intro="The Sodality is guided by a leadership structure that supports scholarship, communication, and coordinated ministry."
+        intro="The Guild is guided by a leadership structure that supports scholarship, communication, and coordinated ministry."
         sections={staticSections}
       />
 
@@ -835,7 +835,7 @@ export function DoctrinalStatementPage() {
       {/* 1. RETAINED: Your exact original content page structure and setup */}
       <ContentPage
         title="Doctrinal Statement"
-        intro="The Canon Law Sodality is committed to the Church’s teaching and to the careful application of law in a manner that serves communion and charity."
+        intro="The Canon Law Guild of Uganda is committed to the Church’s teaching and to the careful application of law in a manner that serves communion and charity."
         sections={staticSections}
       />
 

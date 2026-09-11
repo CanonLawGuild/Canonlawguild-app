@@ -1,17 +1,3 @@
-// import React from 'react'
-// import { Link } from 'react-router-dom'
-
-// export default function AuthStatus(){
-//   const token = localStorage.getItem('cl_token')
-//   if(token){
-//     return <div className="auth-status">Logged in</div>
-//   }
-//   return <Link to="/login" className="btn btn-ghost">Login</Link>
-// }
-
-
-
-
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -38,5 +24,5 @@ export default function AuthStatus(){
     )
   }
 
-  return <Link to="/login" className="btn btn-ghost">Login</Link>
+  // return <Link to="/login" className="btn btn-ghost">Login</Link>
 }

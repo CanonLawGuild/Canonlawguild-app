@@ -1,4 +1,5 @@
 import os
+import dj_database_url # 👈 Imports the URL reading package
 from pathlib import Path
 import dj_database_url
 
@@ -74,13 +75,36 @@ WSGI_APPLICATION = 'backend_project.wsgi.application'
 
 
 
-DATABASES = {
-    'default': dj_database_url.config(
-        # If DATABASE_URL variable is missing (like on your computer), use local SQLite
-        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
-        conn_max_age=600
-    )
-}
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         # If DATABASE_URL variable is missing (like on your computer), use local SQLite
+#         default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
+#         conn_max_age=600
+#     )
+# }
+
+
+# =============================================================
+# 🗄️ DYNAMIC DATABASE PIPELINE CONFIGURATION
+# =============================================================
+if os.environ.get('DATABASE_URL'):
+    # Production Mode: Connects to your live PostgreSQL database on Render
+    DATABASES = {
+        'default': dj_database_url.config(
+            conn_max_age=600,
+            ssl_require=True
+        )
+    }
+else:
+    # Development Mode: Falls back to local SQLite database automatically
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
+        }
+    }
+
+
 
 
 

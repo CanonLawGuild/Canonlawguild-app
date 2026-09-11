@@ -1,35 +1,4 @@
-// import React from 'react'
-
-// export function PrinciplesOfCanonLawPage() {
-//   return (
-//     <div className="container mt-md">
-//       <div className="section__heading">
-//         <h2>Principles of Canon Law</h2>
-//       </div>
-//       <p className="text-muted mt-sm">A concise introduction to the guiding principles that shape canonical discipline and ecclesial order.</p>
-
-//       <div className="grid mt-md grid--single-column">
-//         <section className="card card--accent">
-//           <h3 className="section-subheading">Core Principles</h3>
-//           <p>Canon law rests on principles of communion, justice, charity, and the proper ordering of the Church’s life.</p>
-//           <ul>
-//             <li>Respect for the dignity of the faithful</li>
-//             <li>Care for the common good of the Church</li>
-//             <li>Faithfulness to divine and ecclesial law</li>
-//             <li>Balanced pastoral application</li>
-//           </ul>
-//         </section>
-//       </div>
-//     </div>
-//   )
-// }
-
-
-
-
-
 import React from 'react'
-
 export function PrinciplesOfCanonLawPage() {
   // Deep academic principles explaining Anglican Canon Law
   const corePrinciplesDetail = [

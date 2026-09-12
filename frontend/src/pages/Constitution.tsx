@@ -583,7 +583,9 @@ export default function ConstitutionPage() {
       try {
         setLoading(true);
         setErrorMessage(null);
-        const res = await api.get('http://127.0.0.1:8000/api/constitution-versions/');
+        // const res = await api.get('http://127.0.0.1:8000/api/constitution-versions/');
+        const res = await api.get('constitution-versions/');
+
         
         if (Array.isArray(res.data)) {
           const formattedData = res.data.map((item: any) => ({

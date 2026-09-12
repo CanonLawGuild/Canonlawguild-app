@@ -24,7 +24,8 @@ export default function PublicationView() {
         setLoading(true);
         setError(null);
         // Connects directly using ID parameter mapping hooks
-        const res = await api.get(`http://127.0.0.1:8000/api/publications/${id}/`);
+        // const res = await api.get(`http://127.0.0.1:8000/api/publications/${id}/`);
+        const res = await api.get(`publications/${id}/`);
         setDoc(res.data);
       } catch (err) {
         console.error("Failed to load publication text rows:", err);

@@ -266,7 +266,8 @@ export function AdvisoryOpinionsPage() {
   // 2. Fetch advisory opinions from your backend API on page load
     // 2. Fetch advisory opinions and force the newest to the top
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/advisory-opinions/')
+    // fetch('http://127.0.0.1:8000/api/advisory-opinions/')
+    fetch('advisory-opinions/')
       .then((res) => res.json())
       .then((data: AdvisoryOpinionItem[]) => {
         // Force sort on the frontend to guarantee the latest is always on top

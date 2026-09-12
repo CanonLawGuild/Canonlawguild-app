@@ -333,7 +333,8 @@ export default function PublicationsList() {
       try {
         setLoading(true);
         setErrorMessage(null);
-        const res = await api.get('http://127.0.0.1:8000/api/publications/');
+        // const res = await api.get('http://127.0.0.1:8000/api/publications/');
+        const res = await api.get('publications/');
         if (Array.isArray(res.data)) {
           setItems(res.data);
         } else {

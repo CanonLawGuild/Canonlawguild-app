@@ -10,7 +10,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-change-me'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = [
     'api.canonlawguild.com',
@@ -143,6 +144,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://canonlawguild.com',
     'https://www.canonlawguild.com',
     'https://api.canonlawguild.com',  # Needed for live Django Admin forms
+    'canonlawguild-backend.onrender.com',
     'http://localhost:5173',
     'http://127.0.0.1:5173',
 ]

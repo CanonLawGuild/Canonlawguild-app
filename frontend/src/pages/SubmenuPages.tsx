@@ -1467,7 +1467,7 @@ export function DecidedCasesPage() {
   // 2. Fetch cases from the backend API on page load
   useEffect(() => {
     // fetch('http://127.0.0.1:8000/api/decided-cases/') 
-    fetch('decided-cases/') 
+    fetch('api/decided-cases/') 
       .then((res) => res.json())
       .then((data: DecidedCaseItem[]) => {
         setCases(data);

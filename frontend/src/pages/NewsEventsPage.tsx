@@ -31,7 +31,7 @@ export default function NewsEventsPage() {
         
         // 2. FIXED: Correctly targets your exact singular backend database path matching your admin view
         // const res = await api.get('http://127.0.0.1:8000/api/events/');
-        const res = await api.get('events/'); 
+        const res = await api.get('api/events/'); 
         
         if (Array.isArray(res.data)) {
           setItems(res.data);

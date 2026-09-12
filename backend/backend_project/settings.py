@@ -144,7 +144,7 @@ CSRF_TRUSTED_ORIGINS = [
     'https://canonlawguild.com',
     'https://www.canonlawguild.com',
     'https://api.canonlawguild.com',  # Needed for live Django Admin forms
-    'canonlawguild-backend.onrender.com',
+    'https://canonlawguild-backend.onrender.com',
     'http://localhost:5173',
     'http://127.0.0.1:5173',
 ]
